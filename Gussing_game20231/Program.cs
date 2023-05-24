@@ -1,14 +1,14 @@
 ﻿namespace Gussing_game20231
 {
-    //internal class Program
-    
-    //using System;
+    internal class Program
+    {
+        
 
 public class RnBArtistGuessingGame
     {
-        private static int i;
+            private static int i;
 
-        public static void Main()
+            public static void Main()
         {
             // Create a list of R&B artists.
             List<string> rnBArtists = new List<string> {
@@ -24,9 +24,23 @@ public class RnBArtistGuessingGame
             "The Weeknd"
         };
 
+            // Create a list of answers to the questions.
+            List<string> answers = new List<string> {
+            "Aaliyah Dana Haughton",
+            "Beyoncé Giselle Knowles-Carter",
+            "Christopher Maurice Brown",
+            "Erica Abi Wright",
+            "Elgin Baylor Lumpkin III",
+            "Gabi Wilson",
+            "Jazmine Marie Sullivan",
+            "Kanye Omari West",
+            "Mary Jane Blige",
+            "Abel Tesfaye"
+        };
+
             // Shuffle the list of R&B artists.
             var random = new Random();
-           // random.Shuffle(rnBArtists);
+            //random.Shuffle(rnBArtists);
 
             // Ask the user 10 questions about R&B artists.
             for (int i = 0; i < 10; i++)
@@ -35,34 +49,11 @@ public class RnBArtistGuessingGame
                 string currentArtist = rnBArtists[i];
 
                 // Ask the user a question about the current R&B artist.
-                switch (random.Next(3))
-                {
-                    case 0:
-                        Console.WriteLine("What is the first name of " + currentArtist + "?");
-                        break;
-                    case 1:
-                        Console.WriteLine("What is the last name of " + currentArtist + "?");
-                        break;
-                    case 2:
-                        Console.WriteLine("What is the birthdate of " + currentArtist + "?");
-                        break;
-                }
+                Console.WriteLine("What is the real name of " + currentArtist + "?");
                 string userAnswer = Console.ReadLine();
 
                 // Check if the user's answer is correct.
-                bool isCorrect = false;
-                switch (random.Next(3))
-                {
-                    case 0:
-                        isCorrect = userAnswer == currentArtist.Split(' ')[0];
-                        break;
-                    case 1:
-                        isCorrect = userAnswer == currentArtist.Split(' ')[1];
-                        break;
-                    case 2:
-                        //isCorrect = userAnswer.Contains(currentArtist.Split(' ')[0]) && userAnswer.Contains(currentArtist.Split(' ')[1]);
-                        break;
-                }
+                bool isCorrect = userAnswer == answers[i];
 
                 if (isCorrect)
                 {
@@ -70,7 +61,7 @@ public class RnBArtistGuessingGame
                 }
                 else
                 {
-                    Console.WriteLine("Incorrect! The correct answer is " + currentArtist.Split(' ')[0] + " " + currentArtist.Split(' ')[1]);
+                    Console.WriteLine("Incorrect! The correct answer is " + answers[i]);
                 }
             }
 
@@ -79,6 +70,7 @@ public class RnBArtistGuessingGame
         }
     }
 }
+}
 
 
-
+//string boogers
