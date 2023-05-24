@@ -60,7 +60,7 @@ public class RnBArtistGuessingGame
                         isCorrect = userAnswer == currentArtist.Split(' ')[1];
                         break;
                     case 2:
-                        isCorrect = userAnswer.Contains(currentArtist.Split(' ')[0]) && userAnswer.Contains(currentArtist.Split(' ')[1]);
+                        //isCorrect = userAnswer.Contains(currentArtist.Split(' ')[0]) && userAnswer.Contains(currentArtist.Split(' ')[1]);
                         break;
                 }
 
