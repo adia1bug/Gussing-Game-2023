@@ -21,7 +21,7 @@
 
                 if (guess != randomNumber && numberOfGuesses == 0)
                 {
-                    Console.WriteLine("I see you couldn't figure it out. Go back to school (Maniacle laugh)");
+                    Console.WriteLine("I see you couldn't figure it out. Go back to school (Maniacal laugh)");
                     gameOver = true;
                 }
                 else if (guess == randomNumber)
